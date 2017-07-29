@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BudgetControl"
+             x:Class="BudgetControl.MainPage"
+             Title="Home">
+    <StackLayout>
+        <Label Text="Budget Control Assistant" 
+           HorizontalOptions="Center" 
+               FontSize="Micro"/>
+        <Entry x:Name="Budget"
+               Keyboard="Numeric"
+               Placeholder="Enter Budget"
+               Completed="BudgetEntry_Completed"/>
+        <Label x:Name="Budget_print"
+               HorizontalOptions="Center"/>
+        <Entry x:Name="cost"
+               Keyboard="Numeric"
+               Placeholder="cost"
+               Completed="CostEntry_Completed"/>
+        <Label x:Name="BudgetLeft"
+               HorizontalOptions="Center"/>
+        <Button Text="Done!"
+                Clicked="doneButtonClicked"/>
+        
+        <Button Text="Camera"
+                Clicked="loadCamera"
+                />
+        <Label x:Name="TagLabel" FontSize="Medium"></Label>
+        <Label x:Name="PredictionLabel"></Label>
+        <ScrollView>
+            <Image x:Name="image"/>
+        </ScrollView>
+    </StackLayout>
+
+
+</ContentPage>
